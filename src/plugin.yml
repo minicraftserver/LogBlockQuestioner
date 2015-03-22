@@ -1,5 +1,0 @@
-name: LogBlockQuestioner
-version: 0.03
-author: DiddiZ
-main: de.diddiz.LogBlockQuestioner.LogBlockQuestioner
-description: Ask questions for LogBlock.
