@@ -15,7 +15,7 @@ class Question
 	Question(Player respondent, String questionMessage, String[] answers) {
 		start = System.currentTimeMillis();
 		this.respondent = respondent;
-		respondentHash = respondent.getName().hashCode();
+		respondentHash = respondent.getUniqueId().hashCode();
 		this.questionMessage = questionMessage;
 		this.answers = new HashMap<Integer, String>(answers.length);
 		for (final String ans : answers)

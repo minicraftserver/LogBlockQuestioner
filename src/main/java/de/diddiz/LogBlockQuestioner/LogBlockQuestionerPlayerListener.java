@@ -17,7 +17,7 @@ class LogBlockQuestionerPlayerListener implements Listener
 	@EventHandler
 	public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
 		if (!event.isCancelled() && !questions.isEmpty()) {
-			final int playerHash = event.getPlayer().getName().hashCode();
+			final int playerHash = event.getPlayer().getUniqueId().hashCode();
 			final int answerHash = event.getMessage().substring(1).toLowerCase().hashCode();
 			for (final Question question : questions)
 				if (question.isPlayerQuestioned(playerHash) && question.isRightAnswer(answerHash)) {
